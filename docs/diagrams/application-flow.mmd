@@ -1,0 +1,12 @@
+flowchart TD
+    A([Start]) --> B[Create repositories and services]
+    B --> C[Display main menu]
+    C --> D{User choice}
+    D -->|Students| E[Student management menu]
+    D -->|Courses| F[Course management menu]
+    D -->|Enrollments| G[Enrollment management menu]
+    E --> C
+    F --> C
+    G --> C
+    D -->|Exit| H([End])
+    D -->|Invalid choice| C
