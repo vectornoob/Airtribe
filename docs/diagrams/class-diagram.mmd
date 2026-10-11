@@ -1,0 +1,10 @@
+classDiagram
+    Person <|-- Student
+    Student "1" <-- "0..*" Enrollment : studentId
+    Course "1" <-- "0..*" Enrollment : courseId
+    Enrollment --> EnrollmentStatus
+    StudentService --> StudentRepository
+    CourseService --> CourseRepository
+    EnrollmentService --> EnrollmentRepository
+    EnrollmentService --> StudentRepository
+    EnrollmentService --> CourseRepository
